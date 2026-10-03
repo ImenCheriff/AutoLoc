@@ -22,4 +22,15 @@ public class Reservation {
     private LocalDate dateDebut;
     private LocalDate dateFin;
     private StatutReservation statut;
+
+    @ManyToOne
+    @JoinColumn(name = "id_vehicule")
+    private Vehicule vehicule;
+
+    @ManyToOne
+    @JoinColumn(name = "id_client")
+    private Client client;
+
+    @OneToOne(mappedBy = "reservation")
+    private Contrat contrat;
 }
