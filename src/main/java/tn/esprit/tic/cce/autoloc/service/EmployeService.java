@@ -1,5 +1,7 @@
 package tn.esprit.tic.cce.autoloc.service;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.tic.cce.autoloc.domain.Agence;
 import tn.esprit.tic.cce.autoloc.domain.Employe;
 import tn.esprit.tic.cce.autoloc.repository.AgenceRepository;
@@ -7,6 +9,8 @@ import tn.esprit.tic.cce.autoloc.repository.EmployeRepository;
 
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class EmployeService implements IEmployeService{
 
     EmployeRepository employeRepository;
