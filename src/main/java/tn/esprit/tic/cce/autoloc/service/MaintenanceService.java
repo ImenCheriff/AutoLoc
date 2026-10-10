@@ -1,0 +1,43 @@
+package tn.esprit.tic.cce.autoloc.service;
+
+import tn.esprit.tic.cce.autoloc.domain.Agence;
+import tn.esprit.tic.cce.autoloc.domain.Maintenance;
+import tn.esprit.tic.cce.autoloc.repository.AgenceRepository;
+import tn.esprit.tic.cce.autoloc.repository.MaintenanceRepository;
+
+import java.util.List;
+
+public class MaintenanceService implements IMaintenanceService{
+
+    MaintenanceRepository maintenanceRepository;
+
+    @Override
+    public List<Maintenance> retrieveAllMaintenances() {
+        return maintenanceRepository.findAll();
+    }
+
+    @Override
+    public Maintenance addMaintenance(Maintenance m) {
+        return maintenanceRepository.save(m);
+    }
+
+    @Override
+    public Maintenance updateMaintenance(Maintenance m) {
+        return maintenanceRepository.save(m);
+    }
+
+    @Override
+    public Maintenance retrieveMaintenance(Long idMaintenance) {
+        return maintenanceRepository.findById(idMaintenance).orElse(null);
+    }
+
+    @Override
+    public void removeMaintenance(Long idMaintenance) {
+        maintenanceRepository.deleteById(idMaintenance);
+    }
+
+    @Override
+    public List<Maintenance> addMaintenances(List<Maintenance> maintenances) {
+        return maintenanceRepository.saveAll(maintenances);
+    }
+}
