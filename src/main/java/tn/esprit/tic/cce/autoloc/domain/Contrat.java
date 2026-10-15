@@ -1,5 +1,6 @@
 package tn.esprit.tic.cce.autoloc.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -30,6 +31,7 @@ public class Contrat {
     @JoinColumn(name = "id_reservation", unique = true)
     private Reservation reservation;
 
+    @JsonIgnoreProperties("contrat")
     @OneToMany(mappedBy = "contrat", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Paiement> paiements = new ArrayList<>();
 

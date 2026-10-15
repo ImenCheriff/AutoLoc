@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name = "client")
 @Getter
@@ -19,8 +21,11 @@ public class Client {
     private Long idClient;
     private String nom;
     private String prenom;
+
+    @Column(unique = true)
     private String email;
+
     private String telephone;
     private String numPermis;
-    private String dateInscription;
+    private LocalDate dateInscription;
 }

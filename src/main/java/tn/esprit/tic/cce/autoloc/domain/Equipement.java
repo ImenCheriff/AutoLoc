@@ -1,5 +1,6 @@
 package tn.esprit.tic.cce.autoloc.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,6 +23,7 @@ public class Equipement {
     private Long idEquipement;
     private String libelle;
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "equipements")
     private Set<Vehicule> vehicules = new HashSet<>();
 

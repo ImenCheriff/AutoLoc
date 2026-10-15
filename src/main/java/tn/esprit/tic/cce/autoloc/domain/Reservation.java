@@ -1,5 +1,6 @@
 package tn.esprit.tic.cce.autoloc.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,6 +22,8 @@ public class Reservation {
     private Long idReservation;
     private LocalDate dateDebut;
     private LocalDate dateFin;
+
+    @Enumerated(EnumType.STRING)
     private StatutReservation statut;
 
     @ManyToOne
@@ -31,6 +34,7 @@ public class Reservation {
     @JoinColumn(name = "id_client")
     private Client client;
 
+    @JsonIgnore
     @OneToOne(mappedBy = "reservation")
     private Contrat contrat;
 }
