@@ -2,9 +2,7 @@ package tn.esprit.tic.cce.autoloc.service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import tn.esprit.tic.cce.autoloc.domain.Agence;
 import tn.esprit.tic.cce.autoloc.domain.Paiement;
-import tn.esprit.tic.cce.autoloc.repository.AgenceRepository;
 import tn.esprit.tic.cce.autoloc.repository.PaiementRepository;
 
 import java.util.List;

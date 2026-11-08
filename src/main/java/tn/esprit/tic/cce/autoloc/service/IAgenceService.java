@@ -1,8 +1,6 @@
 package tn.esprit.tic.cce.autoloc.service;
 
 import tn.esprit.tic.cce.autoloc.domain.Agence;
-import tn.esprit.tic.cce.autoloc.domain.Client;
-
 import java.util.List;
 
 public interface IAgenceService {

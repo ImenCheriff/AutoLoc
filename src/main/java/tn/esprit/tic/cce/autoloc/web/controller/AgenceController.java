@@ -4,8 +4,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import tn.esprit.tic.cce.autoloc.domain.Agence;
 import tn.esprit.tic.cce.autoloc.service.AgenceService;
-import tn.esprit.tic.cce.autoloc.service.IAgenceService;
-
 import java.util.List;
 
 @Controller
